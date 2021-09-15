@@ -73,7 +73,7 @@
 
         <hr>    
         
-        <h4>Code Display using HTML</h4>
+        <h4>Code Display     using HTML</h4>
         <blockquote>
             In graph theory, a component of an undirected graph is an induced subgraph in which any two vertices are connected to each other by paths, and which is connected to no additional vertices in the rest of the graph. For example, the graph shown in the illustration has three components. A vertex with no incident edges is itself a component. A graph that is itself connected has exactly one component, consisting of the whole graph. Components are also sometimes called connected components.
         
@@ -89,25 +89,27 @@
     used[v] = true ;
     comp.push_back(v);
     for (size_t i = 0; i < (int) g[v].size(); ++i)
-    {
-    int to = g[v][i];
-    if (!used[to])
-    dfs(to);
+        {
+        int to = g[v][i];
+        if (!used[to])
+        dfs(to);
+         }
     }
-    }
-    void find_comps() {
-    for (int i = 0; i < n ; ++i)
-    used [i] = false;
-    for (int i = 0; i < n ; ++i)
-    if (!used[i]) {
-    comp.clear();
-    dfs(i);
-    cout << "Component:" ;
-    for (size_t j = 0; j < comp.size(); ++j)
-    cout << ' ' << comp[j];
-    cout << endl ;
-    }
-    }   
+    void find_comps() 
+        {
+        for (int i = 0; i < n ; ++i)
+        used [i] = false;
+        for (int i = 0; i < n ; ++i)
+        if (!used[i]) 
+            {
+            comp.clear();
+            dfs(i);
+            cout << "Component:" ;
+            for (size_t j = 0; j < comp.size(); ++j)
+            cout << ' ' << comp[j];
+            cout << endl ;
+            }
+        }   
 
 
         </pre>
